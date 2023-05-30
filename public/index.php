@@ -13,6 +13,11 @@ $app->get('/{name}', function (Request  $request, Response $response, array $arg
     return $response;
 });
 
+$app->get('/', function (Request  $request, Response $response) {
+    $response->getBody()->write("Hello ");
+    return $response;
+});
+
 //friends routes
 require __DIR__ . '/../routes/friends.php';
 
